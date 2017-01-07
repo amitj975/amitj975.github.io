@@ -1,6 +1,3 @@
-title: Amit Jain
-email: UG201310005@iitj.ac.in
-
-
-
-github_username:  amitj975
+name: Amit Jain
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
