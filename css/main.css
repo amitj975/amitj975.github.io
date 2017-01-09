@@ -1,4 +1,23 @@
-body { margin: 30px auto; width: 90%; }
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 25px auto;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  width: 90%;
+}
+
 
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
@@ -34,12 +53,17 @@ img.profile{
  max-width: 100%;
 }
 
-.footer {
-  background: #061D25;
-  padding: 10px 0;
-  bottom: 10px;
-  position:absolute;
 
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #061D25;
+  text-align: center;
 
 }
 
