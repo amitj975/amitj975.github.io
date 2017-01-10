@@ -19,10 +19,10 @@ body {
 }
 
 /*home*/
-.home a { text-decoration: none;font-size: 1.3em; color: #999; }
-.home a:hover { text-decoration: underline;font-size: 1.3em }
+.home a { text-decoration: none;font-size: 1.2em; color: #999; }
+.home a:hover { text-decoration: underline;font-size: 1.2em }
 
-.home p, ul { font-size: 1.2em; line-height: 1.2em; color: #333; }
+.home p, ul { font-size: 1.4em; line-height: 1.5em; color: #333; }
 
 .home big { font-size: 1.5em; line-height: 1.5em; color: #333;}
 
