@@ -61,6 +61,12 @@ body {
 .name {color: #555;}
 
 
+.project p, ul { font-size: 1.4em; line-height: 1.5em; color: #444; }
+.project a { text-decoration: none;font-size: 1em;color: #666; }
+.project a:hover { text-decoration: underline;font-size: 1em }
+
+.project h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; color: #333;}
+
 
 
 
