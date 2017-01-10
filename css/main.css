@@ -50,15 +50,15 @@ body {
 
 /*About*/
 
-.about p, ul { font-size: 1.4em; line-height: 1.5em; color: #333; }
+.about p, ul { font-size: 1.4em; line-height: 1.5em; color: #555; }
 
 
-.about a { text-decoration: none;font-size: 1.1em;color: #999; }
-.about a:hover { text-decoration: underline;font-size: 1.1em }
+.about a { text-decoration: none;font-size: 1em;color: #999; }
+.about a:hover { text-decoration: underline;font-size: 1em }
 
 
 .name h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-.name {color: #333;}
+.name {color: #555;}
 
 
 
