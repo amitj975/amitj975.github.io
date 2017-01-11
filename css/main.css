@@ -55,8 +55,8 @@ body {
 .about a { text-decoration: none;font-size: 1em;color: #999; }
 .about a:hover { text-decoration: underline;font-size: 1em }
 
-div.quotes {font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 2em; line-height: 1.5em; color: #FFF;
-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+div.quotes {font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 2em; line-height: 1.5em; color: #F00;
+text-shadow: 0 0 10px #F00, 0 0 20px #F00, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 70px #ff0, 0 0 80px #ff0, 0 0 100px #ff0, 0 0 150px #fff;
 }
 
 
@@ -74,7 +74,7 @@ div.card {
 }
 div.container {
     padding: 10px;
-    width: 90%;
+    width: 95%;
 }
 
 
