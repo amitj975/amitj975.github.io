@@ -49,7 +49,7 @@ body {
 
 /*About*/
 
-.about p, ul { font-size: 1.4em; line-height: 1.5em; color: #555; }
+.about p, ul {font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.5em; color: #444; }
 
 
 .about a { text-decoration: none;font-size: 1em;color: #999; }
@@ -57,14 +57,14 @@ body {
 
 
 .name h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-.name {color: #555;}
+.name {color: #444;}
 
 
-.project p, ul { font-size: 1.4em; line-height: 1.5em; color: #444; }
+.project p, ul {ont-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em;color: #444; }
 .project a { text-decoration: none;font-size: 1em;color: #666; }
 .project a:hover { text-decoration: underline;font-size: 1em }
 
-.project h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; color: #333;}
+.project h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; color: #111;}
 
 
 
