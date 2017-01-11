@@ -4,6 +4,8 @@ title: "First Interview Experience"
 date: 2016-11-01
 ---
 
+
+
 Recently Microsoft visited our campus for IDC internship program and following is my interview experience.
 
 ## Online MCQ Round:
@@ -37,4 +39,4 @@ Allowed Time Complexity was O(n) and Space Complexity was O(1).It took me 10min 
 Hint : Use two Pointer Method and Bool array of length 256.
 
 
-# Got Internship offer!!!
+## Got Internship offer!!!
