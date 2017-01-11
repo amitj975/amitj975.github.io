@@ -56,7 +56,7 @@ body {
 .about a:hover { text-decoration: underline;font-size: 1em }
 
 div.quotes {font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.9em; line-height: 1.5em; color: #F00;
-text-shadow: 0 0 10px #F00, 0 0 20px #F00, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+/*text-shadow: 0 0 10px #F00, 0 0 20px #F00, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;*/
 }
 
 
