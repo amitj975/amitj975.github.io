@@ -98,8 +98,6 @@ div.container {
 
 
 .post p, ul { font-size: 1em;color: #222; }
-.post a { text-decoration: none;font-size: 1em;color: #666; }
-.post a:hover { text-decoration: underline;font-size: 1em }
 
 .post h1 { font-size: 2em; }
 .post h2 { font-size: 1.3em; }
