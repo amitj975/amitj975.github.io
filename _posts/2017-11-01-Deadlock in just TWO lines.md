@@ -4,9 +4,6 @@ title: "Deadlock in just TWO lines"
 date: 2017-11-01
 ---
 
-#Deadlock in just TWO lines
-
-
 This issue took my whole day. I never had an idea, that I would face a [deadlock](https://en.wikipedia.org/wiki/Deadlock) just by two lines of code in my real life coding scenario.
 
 * Var x = async();
