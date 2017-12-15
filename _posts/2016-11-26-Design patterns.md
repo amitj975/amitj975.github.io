@@ -5,45 +5,39 @@ date: 2017-11-27
 ---
 
 ## Observer pattern
-Instead of subject tracking the records of all the observer and making all the changes in code won’t be a good idea.
-Subjects can have a list of observers then have a function like add remove and send the notification.
+[![Observer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png "Observer")](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png)
+Let's say you want to build a system where there is N number of observers, who wants an update, whenever there is a change in state of the subject. All observer want to get the notifications as well as they can register and un-register from this service effortlessly. 
+To do that job, there is a famous design pattern, in which, the subject can have [HAS-A](https://en.wikipedia.org/wiki/Has-a) relationship with the list of observers, and have functions like register and notifyObserver.
+Now, every observer will inherit the Observer interface and then can register or unregister itself by calling function of the subject class. And, to notify all the observer, the subject just have to call notifyObserver which will iterate through all the observer list, and call notifies function which they have inherited from the observer interface.
 
 ## Decorator pattern 
-You’ll learn how to decorate your classes at runtime using a form of object composition.
-You have a lot of topping for coffee. Now, you should have a topping which will extend the coffee class, and these topping will be extended by each topping. Now, these toppings are of coffee type only and have coffee object in it. Decorators are meant to add behavior to the object they wrap. When you need to peek at multiple layers into the decorator chain.
+[![decorator.gif](http://www.dofactory.com/images/diagrams/net/decorator.gif "Decorator")](http://www.dofactory.com/images/diagrams/net/decorator.gif)
+You have a coffee shop(Component), and you want to have a function in you coffee class which will give you the price(Operation) of that coffee.
+You sell different type of coffee with various toppings. Sometimes a combination of many topping. It will be a headache for you if you create classes for each combination. 
+Decorator pattern is here for you!!
+Assume you need to add a cream topping in cappuccino. Now you know the resultant thing will be a coffee again right. First, we create cappuccino class(ConcreteComponent) which inherit coffee class(component). Now we will add topping(ConreteDecoratorB) by making an object of it and pass the cappuccino class object in the constructor. As decorator has HAS-A relationship with Component. Now when you call price(operation) function, it will first call operation function of base price plus topping price(addedBehavior). 
 
 ## Factory pattern
-You’ll learn that instantiation is an activity that shouldn’t always be done in public and can often lead to coupling problems. And you don’t want that, do you? Find out how Factory Patterns can help save you from embarrassing dependencies. 
-Ordering pizza function has to first decide the pizza then it is a very straightforward process like bake, cut and box.
-Create pizza factory which will take the type of input and return pizza. Now many classes can inherit the pizza factory and new york and Chicago both will interpret cheese differently.
-The Dependency Inversion Principle makes an even stronger statement about abstraction. It suggests that our high-level components should not depend on our low-level components; rather, they should both depend on abstractions.   
+[![factory.gif](http://www.dofactory.com/images/diagrams/net/factory.gif "Factory")](http://www.dofactory.com/images/diagrams/net/factory.gif)
+
+Now, Your coffee business is running great as you were using excellent decorator pattern and now you decide to open a pizza shop. 
+Here the requirement is bit different, as here you need to bake a different type of pizza and then you need to perform various operation on it like cutting, packing and delivering to address.
+Indeed, you don't want to do all this thing by just one class, as we all follow the [god rule for classes](https://en.wikipedia.org/wiki/Single_responsibility_principle). Here, we assign the task of pizza creation to a factory method, which will create your pizza(Product) based on the specification. And then we operate it in creator class. As, It suggests that our high-level components should not depend on our low-level elements; instead, they should both depend on abstractions. 
+
 
 ## Singleton Pattern:
-Private constructor so that no one can initiate an object of it. And a static method which returns an instance of this class. Now the whole project will use this instance. Be careful when you are handling with the different thread which might create two objects if you are creating instance reactively.
-
-## Command pattern:   
-The Command Pattern allows you to decouple the requester of an action from the object that performs the action. So, here the requester would be the remote control and the object that acts would be an instance of one of your vendor classes.
-The lightopen and GarageOpenDoor command will be used. OnCommand can have a light on and Off command can light off. And pressing each button it will execute the command.Execute() function.No command will use to initialize the remote if no command is provided.
-
-Now, instead of creating LightOnCommand and LightOffCommand objects to pass to remoteControl.setCommand(),
-we simply pass a lambda expression in place of each object, with the code from their respective execute() methods:
-
-remotecontrol.setcommand(0, () -> {livingRoomOn();},() -> {livingRoomOff();})
-
-Setcommand (int slot, command Oncommand, command Offcommand){
-Oncommand[slot] =oncommand;
-OffCommand[slot] =offcommand;
-}
-Or 
-Command lighton = ()=> {lighton();}
-
-The command that’s in slot 0 is a function object (created by the lambda expression). When we call execute() on the command, that method is matched up with the method defined by the
-lambda expression, which is then executed.
+[![Singleton_pattern](https://www.tutorialspoint.com/design_pattern/images/singleton_pattern_uml_diagram.jpg "Singleton_pattern")](https://www.tutorialspoint.com/design_pattern/images/singleton_pattern_uml_diagram.jpg)
+Every project uses database right! We make so many calls, and we keep on updating the database. We don't want that our database runs into concurrency issues. So we decide that database class should have only one object. Now, you can restrict someone from creating an object of a class. What if we make it constructor private ;). You heard me! We will make the class constructor private so that no one can create an object of this class except itself. We will create an object of this class and make that private too. And have a public static function to get an instance. Whoever needed will call this function to get the _loneInstance of the class. Cool right!
 
 
-## The Adapter and Facade pattern:
-We will design a turkeyAdapter which will implement duck interface and have a turkey object. In this to make turkey fly, we will call turkey.Fly() 5 times in turkeyAdapter to make it like a duck.
-Facades don’t “encapsulate” the subsystem classes; they merely provide a simplified interface to their functionality. The subsystem classes remain available for direct use by clients that need to use more specific interfaces. This is a nice property of the Facade Pattern: it provides a simplified interface while still exposing the full functionality of the system to those who may need it.
+## Command pattern:  
+[![Command.gif](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Command_pattern.svg/700px-Command_pattern.svg.png "Command")](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Command_pattern.svg/700px-Command_pattern.svg.png)
+The Command Pattern allows you to decouple the requester of an action from the object that acts. 
+Let's say your team building [FIFA](https://www.easports.com/fifa). You got a most important command to implement that is Shoot(execute). Now your [controller](https://compass-ssl.xbox.com/assets/d3/d8/d3d83d26-d0df-49b8-9ad2-f213425a091d.jpg?n=X1-Wireless-Controller-Black_Gallery_1056x594_02.jpg) doesn't need to know that whether you are operating Messi or Ronaldo. When user press shoot, we got to shoot with player's(state) precision and speed. Here all player will inherit the player class(Command). Once shoot(execute) command comes, we will shoot by player's skill set(receiver.action).
 
-## Template pattern:
-It is more like creating an abstract class for both coffee and tea.
+
+
+## The Adapter pattern:
+[![Adapter](http://www.dofactory.com/images/diagrams/net/adapter.gif "Adapter")](http://www.dofactory.com/images/diagrams/net/adapter.gif)
+
+Let's say your PM gives you a weird task. In your project, you have a bird class(target) and a turkey class(Adaptee). Now, we all know how turkey fly. Your pm is asking to perform all the task on the turkey class that you were performing on bird class. Here comes the need for an adapter, it will inherit the target interface. So this adapter class(Flying turkey) will be a bird as it is inheriting the target interface. But still, it will be a turkey. Now when someone the fly function(Request) of this bird object, we will call flap(Specificrequest) function five times of turkey class to give an effect like flying.
