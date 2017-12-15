@@ -6,15 +6,15 @@ date: 2017-11-27
 
 ## Observer pattern
 
-[![Observer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png "Observer")](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png)  
-`Let's say you want to build a system where there is N number of observers, who wants an update, whenever there is a change in state of the subject. All observer want to get the notifications as well as they can register and un-register from this service effortlessly. 
+		[![Observer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png "Observer")](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png)  
+_**`Let's say you want to build a system where there is N number of observers, who wants an update, whenever there is a change in state of the subject. All observer want to get the notifications as well as they can register and un-register from this service effortlessly. 
 To do that job, there is a famous design pattern, in which, the subject can have [HAS-A](https://en.wikipedia.org/wiki/Has-a) relationship with the list of observers, and have functions like register and notifyObserver.
 Now, every observer will inherit the Observer interface and then can register or unregister itself by calling function of the subject class. And, to notify all the observer, the subject just have to call notifyObserver which will iterate through all the observer list, and call notifies function which they have inherited from the observer interface.
-`
-____
+`**_
+*********************
 
 ## Decorator pattern 
-[![decorator.gif](http://www.dofactory.com/images/diagrams/net/decorator.gif "Decorator")](http://www.dofactory.com/images/diagrams/net/decorator.gif)  
+		[![decorator.gif](http://www.dofactory.com/images/diagrams/net/decorator.gif "Decorator")](http://www.dofactory.com/images/diagrams/net/decorator.gif)  
 `You have a coffee shop(Component), and you want to have a function in you coffee class which will give you the price(Operation) of that coffee.
 You sell different type of coffee with various toppings. Sometimes a combination of many topping. It will be a headache for you if you create classes for each combination. 
 Decorator pattern is here for you!!
@@ -24,7 +24,7 @@ Assume you need to add a cream topping in cappuccino. Now you know the resultant
 
 
 ## Factory pattern
-[![factory.gif](http://www.dofactory.com/images/diagrams/net/factory.gif "Factory")](http://www.dofactory.com/images/diagrams/net/factory.gif)  
+		[![factory.gif](http://www.dofactory.com/images/diagrams/net/factory.gif "Factory")](http://www.dofactory.com/images/diagrams/net/factory.gif)  
 `Now, Your coffee business is running great as you were using excellent decorator pattern and now you decide to open a pizza shop. 
 Here the requirement is bit different, as here you need to bake a different type of pizza and then you need to perform various operation on it like cutting, packing and delivering to address.
 Indeed, you don't want to do all this thing by just one class, as we all follow the [god rule for classes](https://en.wikipedia.org/wiki/Single_responsibility_principle). Here, we assign the task of pizza creation to a factory method, which will create your pizza(Product) based on the specification. And then we operate it in creator class. As, It suggests that our high-level components should not depend on our low-level elements; instead, they should both depend on abstractions. 
