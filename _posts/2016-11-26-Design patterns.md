@@ -14,6 +14,7 @@ Now, every observer will inherit the Observer interface and then can register or
 *********************
 
 ## Decorator pattern 
+>>
 [![decorator.gif](http://www.dofactory.com/images/diagrams/net/decorator.gif "Decorator")](http://www.dofactory.com/images/diagrams/net/decorator.gif)  
 `You have a coffee shop(Component), and you want to have a function in you coffee class which will give you the price(Operation) of that coffee.
 You sell different type of coffee with various toppings. Sometimes a combination of many topping. It will be a headache for you if you create classes for each combination. 
@@ -34,7 +35,7 @@ Indeed, you don't want to do all this thing by just one class, as we all follow 
 
 ## Singleton Pattern:
 [![Singleton_pattern](https://www.tutorialspoint.com/design_pattern/images/singleton_pattern_uml_diagram.jpg "Singleton_pattern")](https://www.tutorialspoint.com/design_pattern/images/singleton_pattern_uml_diagram.jpg)  
-`	Every project uses database right! We make so many calls, and we keep on updating the database. We don't want that our database runs into concurrency issues. So we decide that database class should have only one object. Now, you can restrict someone from creating an object of a class. What if we make it constructor private ;). You heard me! We will make the class constructor private so that no one can create an object of this class except itself. We will create an object of this class and make that private too. And have a public static function to get an instance. Whoever needed will call this function to get the _loneInstance of the class. Cool right!
+	`Every project uses database right! We make so many calls, and we keep on updating the database. We don't want that our database runs into concurrency issues. So we decide that database class should have only one object. Now, you can restrict someone from creating an object of a class. What if we make it constructor private ;). You heard me! We will make the class constructor private so that no one can create an object of this class except itself. We will create an object of this class and make that private too. And have a public static function to get an instance. Whoever needed will call this function to get the _loneInstance of the class. Cool right!
 `
 *******************
 
