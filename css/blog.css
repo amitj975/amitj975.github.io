@@ -3,7 +3,7 @@
 ul.posts { margin: 20px auto 40px; font-size: 1.7em; }
 ul.posts li { list-style: none; }
 
-.markdown-body img {
+img {
     max-width: 100%;
     box-sizing: content-box;
     background-color: #fff;
