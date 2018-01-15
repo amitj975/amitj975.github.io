@@ -4,7 +4,7 @@ title: "Power of Actor model with Service fabric"
 date: 2018-01-14
 ---
 ## Power of Actor model with Service fabric
-[![profile.gif]("~/res/profile.gif")](res/profile.gif)  
+[![profile.gif](/res/profile.gif)](res/profile.gif)  
 >“In Actor model, Actors are the basic computation unit and they can interact with each other through messages. You can think an actor as a class containing receive and send message functions, and they can have their own private state and functions. Based on these they can take some action, send messages, or create more actors.”
 
 Now a little bit of Azure Service Fabric:
